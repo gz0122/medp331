@@ -10,16 +10,17 @@
 <body>
     <nav class="navbar"> <!--navigation-->
         <ul>
-            <li><a href="##">HOME</a></li>
-            <li><a href="##">ABOUT</a></li>
-            <li><a href="##">ARTWORK</a></li>
-            <li><a href="##">CONTACT</a></li>
+            <li><a href="#home">HOME</a></li>
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#portraits">PORTRAITS</a></li>
+            <li><a href="#projects">PROJECTS</a></li>
+            <li><a href="#contact">CONTACT</a></li>
         </ul>
     </nav>
 
     <section id="home">
         <div class="main">
-            <h1 class="headings">welcome to my gallery</h1>
+            <h1 class="welcome">WELCOME</h1>
             <img src="images/logow.png" alt="logo">
         </div>
     </section>
@@ -35,8 +36,8 @@
         </div>
     </section>
 
-    <section id="artwork">
-        <h1 class="headings">PORTFOLIO</h1>
+    <section id="portraits">
+        <h1 class="headings">PORTRAITS</h1>
         <div class="gallery">
             <img src="images/portrait1.png" alt="siblings">
             <img src="images/portrait2.png" alt="friends">
@@ -47,12 +48,23 @@
         </div>
     </section>
 
+    <section id="projects">
+        <h1 class="headings">PROJECTS</h1>
+        <div class="row">
+            <iframe src="docs/ProjectBrief.pdf" class="pdf" width="600px" height="500px"></iframe>
+            <iframe src="docs/Recipe.pdf" class="pdf" width="600px" height="500px"></iframe>
+            <iframe src="docs/CommDesign.pdf" class="pdf" width="600px" height="500px"></iframe>
+            <iframe src="docs/UIUX.pdf" class="pdf" width="600px" height="500px"></iframe>
+        </div>
+    </section>
+
     <section id="contact">
         <h1 class="headings">CONTACT</h1>
         <form action="" class="form">
             <input type="text" name="name" class="input" placeholder="Enter Your Name">
             <input type="email" name="email" class="input" placeholder="Enter Your Email">
             <textarea name="msg" id="msg" cols="30" rows="10"></textarea>
+            <input type="submit" value="SEND" id="send">
         </form>
     </section>
 </body>
