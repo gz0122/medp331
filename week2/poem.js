@@ -1,35 +1,19 @@
-var t=0;
-flowers = ["ROSES", "CHRYSANTHEMUMS", "TULIPS", "LILIES", "ORCHIDS", "IRISES", "SUNFLOWERS", "HYDRANGEAS",];
-place = ["ON A BEACH", "IN OUTERSPACE","ON MARS","ON A TROPICAL ISLAND","IN THE DEEP SEA","ON MOUNT EVEREST","ON THE EIFFEL TOWER","IN THE STATUE OF LIBERTY"];
-light_source = ["SOLAR POWER","FLASHLIGHTS","FIRE","FIREFLIES","MOONLIGHT","LANTERNS","DAYLIGHT",];
-inhabitants = ["ALIENS","TROLLS","DRAGONS","GIANTS","FAIRIES","UNICORNS","PEGASUSES"];
+var t = 0
+let myTitle = "MYTHICAL ISLANDS"
+let myArticleArray = ["A BOUQUET OF", "A GARDEN OF", "A ROOM FULL OF"]
+let flowers = ["ROSES", "CHRYSANTHEMUMS", "TULIPS", "LILIES", "ORCHIDS", "IRISES", "SUNFLOWERS", "HYDRANGEAS"]
+let places = ["ON A BEACH", "IN OUTERSPACE","ON MARS","ON A TROPICAL ISLAND","IN THE DEEP SEA","ON MOUNT EVEREST","ON THE EIFFEL TOWER","IN THE STATUE OF LIBERTY"]
+let light_source = ["SOLAR POWER","FLASHLIGHTS","FIRE","FIREFLIES","MOONLIGHT","LANTERNS","DAYLIGHT"];
+let inhabitants = ["ALIENS","TROLLS","DRAGONS","GIANTS","FAIRIES","UNICORNS","PEGASUSES"];
 
-function rand_range(maximum) {
-    "use strict";
-    return Math.floor(Math.random() * (maximum + 1));
+let text = "";
+text += myTitle + "<br>" + "by Grace Zhu" + "<br><br>"
+for(let i=0; i<8; i++){
+  text += getRandomItem(myArticleArray)+"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"+getRandomItem(flowers)+"<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"+getRandomItem(places)+"<br>"+"DECORATED BY &nbsp;&nbsp;&nbsp;"+getRandomItem(inhabitants)+"<br><br>";
 }
-function choose(array) {
-    "use strict";
-    return array[rand_range(array.length - 1)];
+document.getElementById("demo").innerHTML = text;
+function getRandomItem(array){
+  return array[Math.floor(Math.random()*array.length)]
 }
-function stanza() {
-    "use strict";
-    return '<span style="color:transparent">A HO</span>USE OF ' + choose(flowers) + '<br \>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;' + choose(place) + '<br \>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:transparent">U</span>SING ' + choose(light_source) + '<br \>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:transparent">INHABITED</span> BY ' + choose(inhabitants);
-}
-function litany() {
-    "use strict";
-    var last, text, main = document.getElementById('main');
-    if (8 > t) {
-        t += 1;
-    } else {
-        main.removeChild(document.getElementById('main').firstChild);
-    }
-    last = document.createElement('div');
-    last.innerHTML = stanza();
-    main.appendChild(last);
-}
-function produce_litany() {
-    "use strict";
-    litany();
-    setInterval(litany, 5000);
-}
+
+

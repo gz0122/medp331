@@ -1,8 +1,42 @@
-html, body {
-    margin: 0;
-    padding: 0;
+
+body {
+  /* background:rgb(203, 26, 94); */
+  color:rgb(102, 97, 97);
+  text-align: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 14pt;
+  animation: 10000ms ease-in-out infinite color-change;
+ }
+
+/* color changing effect code derived from: */
+/* https://stackoverflow.com/questions/43371912/how-to-make-an-html-css-js-color-changing-background-like-kahoot-it-has */
+ @keyframes color-change {
+  0% {
+    background-color: #FF9AA2;
   }
-  canvas {
-    display: block;
+  20% {
+    background-color: #FFB7B2;
   }
-  
+  40% {
+    background-color: #FFDAC1;
+  }
+  60% {
+    background-color: #E2F0CB;
+  }
+  80% {
+    background-color: #B5EAD7;
+  }
+  100% {
+    background-color: #C7CEEA;
+  }
+}
+ a {
+  text-decoration:none;
+ }
+ #main {
+  width:70%;
+ }
+ #main div {
+  font-weight:bold;
+  padding-bottom:21px;
+ }
