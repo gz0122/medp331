@@ -12,22 +12,22 @@ body {
   /* https://stackoverflow.com/questions/43371912/how-to-make-an-html-css-js-color-changing-background-like-kahoot-it-has */
    @keyframes color-change {
     0% {
-      background-color: #FF9AA2;
+      background-color: #062B79;
     }
     20% {
-      background-color: #FFB7B2;
+      background-color: #16498A;
     }
     40% {
-      background-color: #FFDAC1;
+      background-color: #599587;
     }
     60% {
-      background-color: #E2F0CB;
+      background-color: #FAFBBD;
     }
     80% {
-      background-color: #B5EAD7;
+      background-color: #FDE050;
     }
     100% {
-      background-color: #C7CEEA;
+      background-color: #F1B351;
     }
   }
    a {
