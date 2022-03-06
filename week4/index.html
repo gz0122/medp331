@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <script src="utility.js"></script>
-    <link rel="stylesheet" href="styles.css">
-    <title> Chinese Zodiac </title>
+    <link rel="stylesheet" href="style.css">
+    <title> HW 4 </title>
   </head>
   <body>
-    <p>Enter your birth year. For example: "1975"
+    <h2>Find out your Chinese Zodiac</h2>
+    <h3>Enter your birth year</h3>
         <form NAME="frm">
-        <input TYPE="text" SIZE="4" NAME="inyear" value="1975"> <input TYPE="button" VALUE="My pet, please" onClick="getpet()"><br>
-        <p><input TYPE="text" SIZE="9" NAME="birth">
+        <input TYPE="text" SIZE="4" NAME="inyear" id="year" placeholder="yyyy"><br> 
+        <input TYPE="button" VALUE="submit" id="submit" onClick="getZodiac()"><br>
+        <h4 id="display">You are born in the year of the... <output TYPE="text" SIZE="9" NAME="birth"></h4>
         </form>
     <script src="script.js"></script>
   </body>
