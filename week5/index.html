@@ -1,19 +1,30 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="style.css">
         <title>DOG API</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Londrina+Outline">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Indie+Flower">
+        <link rel="stylesheet" href="style.css">
     </head>
+
     <body>
         <div class="app">
             <div class="header">
-                <h1>Dog Breeds</h1>
-                <div id="breed"></div>
+                <h1>
+                    <img src="images/trails.gif" style="width:75px; transform: scaleX(-1);">
+                    DOGEPEDIA
+                    <img src="images/trails.gif" style="width:75px">
+                </h1>
+                <div id="breed"> <!--select listing-->
+                </div>
             </div>
-            <div class="slideshow">
-                <div class="slide" style="background-image:url('')"></div>
-            </div>
+            <div class="photo" id="photo">
+                <img src="images/tail.gif" style="border: none; padding-top: 60px;">
+            </div> <!--image display-->
         </div>
+        <!--buttons-->
+            <button class="myButton" id="reset">reset</button> 
+            <button class="myButton" id="random">random</button>
         <script src="script.js"></script>
     </body>
 </html>
